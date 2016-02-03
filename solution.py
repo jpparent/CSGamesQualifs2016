@@ -12,10 +12,10 @@
 # N'OUBLIER PAS DE "FLUSHER" VOS SORTIES!
 
 import sys
-# damn Windows who doesn't play well with script outputs...
-#_, msg = sys.stdin.readline().split(':')
+m, msg = sys.stdin.readline().split(':')
 
-_, m, msg = sys.argv
+# damn Windows who doesn't play well with script outputs... Had to test manually with examples
+#_, m, msg = sys.argv
 
 flush = sys.stdout.flush
 
@@ -64,13 +64,14 @@ elif m == "4":
 		
 		dic[i] = dic[i] +1
 		pass
+	
 	s = ""
 	for j in dic:
-		#print(dic[j])
 		s = s + j + ";" + str(dic[j]) + " "
 	print(s)
 	flush()
 
 elif m == "5":
 	print("did not finish, thanks Windows...")
+	flush()
 
